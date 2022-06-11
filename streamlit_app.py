@@ -9,4 +9,4 @@ st.title('Test')
 fecha_inicio = st.slider("Ver informacion registrada en:",
     value = datetime(2020,1,1,9,30),
     format = "DD/MM/YY - hh:mm")
-st.write("Fecha seleccionada:". fecha_inicio)
+st.write("Fecha seleccionada:", fecha_inicio)
