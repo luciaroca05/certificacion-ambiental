@@ -1,15 +1,12 @@
 """
 git add . && git commit -m "" && git push
 """
-import pandas as pd # pd es alias de pandas
-#from google.colab import drive
+# Importación de bibliotecas
+import pandas as pd
 import plotly.express as px
 import numpy as np
 import sklearn as sk
-
 import streamlit as st
-import pandas as pd
-import numpy as np
 from datetime import datetime
 
 # Carga de datos
@@ -40,26 +37,42 @@ df_aprobado['LATITUD'],df_aprobado['LONGITUD']=np.where(df_aprobado['LATITUD']<-
 # Unificación de datas para visualización (aprobados y desaprobados)
 df_unificado =  pd.concat([df_aprobado, df_desaprobado])
 
+
+#App
+st.title('Certificación Ambiental - Proyecto Final')
+
+st.write('Bienvenidx al **app**')
+st.write()
+
+#Proyectos con fecha
+st.write('Proyectos por fecha')
 fecha_inicio = st.slider("Ver informacion registrada en:",
     value = datetime(2020,1,1,9,30),
     format = "DD/MM/YY - hh:mm")
 st.write("Fecha seleccionada:", fecha_inicio)
 
+#Visualizar datos de dataset
 opcion_dataset = st.selectbox(
      '¿Qué dataset deseas visualizar?',
      ('Proyectos aprobados', 'Proyectos desaprobados', 'Proyectos en evaluacion'))
-
 df_visualizacion = None
+estado = '-'
 if opcion_dataset == 'Proyectos aprobados':
     df_visualizacion = df_aprobado
+    estado = 'aprobados'
 elif opcion_dataset == 'Proyectos desaprobados':
     df_visualizacion = df_desaprobado
+    estado = 'desaprobados'
 elif opcion_dataset == 'Proyectos en evaluacion':
     df_visualizacion = df_evaluacion
+    estado = 'en evaluación'
 
-st.write('Seleccionó:', len(df_visualizacion.index))
+st.write('Seleccionó ', len(df_visualizacion.index),'proyectos',estado,'para visualizar:')
 
+st.write('Tabla de datos',estado,'en formato DataFrame')
 st.table(df_visualizacion)
 
+st.write('Ubicación de los proyectos',estado)
 df_visualizacion = df_visualizacion.rename(columns={'LATITUD':'lat', 'LONGITUD':'lon'})
 st.map(df_visualizacion[['lat','lon']])
+
