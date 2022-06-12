@@ -1,5 +1,7 @@
 """
-git add . && git commit -m "" && git push
+cd Desktop
+cd proy (TAB)
+git add . && git commit -m "." && git push
 """
 # Importación de bibliotecas
 import pandas as pd
@@ -300,3 +302,8 @@ df_xlsx = to_excel(df_evaluacion_gen)
 st.download_button(label='📥 Download Current Result',
                                 data=df_xlsx ,
                                 file_name= 'df-evaluacion-clasificada-'+opcion_modelo.replace(' ','-').lower()+'.xlsx')
+
+# Primero ordenar el codigo, colocando comentarios en #, no multilinea por que st lo reconoce
+# Actualizar los textos del st, agregando tambien titulos, textos, espacios, lineas, donde se debe
+# Cambiar los textos que figuren como lo del boton ,etc
+# En base esto documentar primero en el markdow (readme) y en tu informe
