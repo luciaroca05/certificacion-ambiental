@@ -161,7 +161,7 @@ ambiental del Servicio Nacional de Certificación Ambiental para las Inversione
 
 Fuente: https://www.datosabiertos.gob.pe/dataset/certificaci%C3%B3n-ambiental
 
-Los datos están clasificados en las siguientes categorías,
+Los datos de los proyectos están clasificados en las siguientes categorías,
 '''
 st.write('ID: ') 
 st.write('Titular: ')
@@ -181,9 +181,11 @@ st.markdown("---") # Linea divisoria
 
 #-------------------------------------
 
-# Seleccion del dataset
+#Análisis exploratorio
 st.header('Análisis exploratorio')
 st.markdown("---")
+
+# Seleccion del dataset
 st.subheader('Seleccione proyecto por estado (aprobados, desaprobados o en evaluación)')
 
 st.markdown("##") # Linea en blanco
@@ -265,6 +267,7 @@ st.write('Tabla 1. Tabla de datos',estado,'en formato DataFrame.')
 st.markdown("---") # Linea divisoria
 #-----------------------------------------2DO----ANÁLISIS-----------------------------------------
 
+# Análisis predictivo
 st.header('Análisis predictivo')
 st.subheader('Aplicación de los 5 pasos fundamentales para Machine Learning (Fig. 5.)')
 st.markdown("---")
@@ -276,9 +279,13 @@ las columnas de longitud, latitud, año y mes como X para predecir Y, que vendr�
 A continuación, usted podrá elegir el tipo de modelo (LR, SVM, RF, NN) que desee usar para obtener el archivo
 donde se clasifica los proyectos que se encuentran en estado de evaluación como Aprobado o Desaprobado.
 '''
+st.markdown("##") # Linea en blanco
+# Imagen de las fases del Machine Learning
+image = Image.open('machinelearning.png')
+st.image(image, caption='Figura 5. Pasos Fundamentales para el Machine Learning')
+st.markdown("##") # Linea en blanco
 
-
-
+# Selección del modelo para clasificar dataset de En evaluación
 st.markdown("##") # Linea en blanco
 st.write('Seleccionar tipo de modelo que se desea entrenar')
 st.markdown("##") # Linea en blanco
@@ -296,6 +303,7 @@ elif opcion_modelo == 'Neural Network':
     modelo = NN
 st.markdown("##") # Linea en blanco
 
+# Nivel de predicción del modelo elegido
 text2 = '• El score del modelo '+opcion_modelo+' es: '+str(round(modelo.score(X_test, y_test), 4))
 st.subheader(text2)
 
@@ -303,6 +311,7 @@ st.markdown("##")
 st.subheader("Se clasificaron los datos que tenían estado EN EVALUACIÓN utilizando el modelo",opcion_modelo)
 st.write("Pulsar en el botón para descargar la información ya clasificada")
 
+# Creación del excel con predicciones
 X_gen = df_evaluacion.iloc[:,[10,11,14,15]]
 y_gen = pd.DataFrame(modelo.predict(X_test))
 df_evaluacion_gen = df_evaluacion
@@ -322,6 +331,7 @@ def to_excel(df):
 
 df_xlsx = to_excel(df_evaluacion_gen)
 
+#Descarga del Excel con dataset nuevo con clasificaciones
 st.markdown("##")
 st.download_button(label='📥 Descargar aquí',
                                 data=df_xlsx ,
