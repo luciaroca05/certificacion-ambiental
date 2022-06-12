@@ -1,8 +1,13 @@
 """
+https://github.com/luciaroca05/proyecto-final-certificacion-ambiental/
+https://share.streamlit.io/luciaroca05/proyecto-final-certificacion-ambiental/main
 cd Desktop
 cd proy (TAB)
-git add . && git commit -m "." && git push
+git pull && git add . && git commit -m "." && git push
 """
+
+pip install plotly
+
 # Importación de bibliotecas
 import pandas as pd
 import plotly.express as px
