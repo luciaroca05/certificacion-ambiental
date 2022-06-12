@@ -6,7 +6,7 @@ cd proy (TAB)
 git pull && git add . && git commit -m "." && git push
 """
 
-pip install plotly
+$ pip install plotly
 
 # Importación de bibliotecas
 import pandas as pd
