@@ -136,7 +136,7 @@ st.markdown("<h1 style='text-align: center; color: black;'>Certificación Ambien
 st.markdown("##") # Linea en blanco
 
 #Bienvenida
-st.markdown("<h1 style='text-align: center; color: black;'>Bienvenidx a nuestra APP 😄!</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>Bienvenidxs a nuestra APP 🐄!</h1>", unsafe_allow_html=True)
 st.markdown("---") # Linea divisoria
 st.markdown("##") # Linea en blanco
 
