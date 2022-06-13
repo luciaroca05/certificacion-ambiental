@@ -156,8 +156,9 @@ st.markdown("---") # Linea divisoria
 st.header('Sobre el APP')
 st.markdown("##") # Linea en blanco
 '''
-En esta APP se va a relizar el análisis, visualización y clasificación, utilizando datos sobre certificación
-ambiental del Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles – SENACE.
+En esta APP se va a relizar el análisis, visualización y clasificación, utilizando datos de proyectos en
+3 diferentes estados (Aprobados, Desaprobados, En evalución) sobre certificación ambiental del Servicio
+Nacional de Certificación Ambiental para las Inversiones Sostenibles – SENACE.
 
 Fuente: https://www.datosabiertos.gob.pe/dataset/certificaci%C3%B3n-ambiental
 
@@ -186,7 +187,7 @@ st.header('Análisis exploratorio')
 st.markdown("---")
 
 # Seleccion del dataset
-st.subheader('Seleccione proyecto por estado (aprobados, desaprobados o en evaluación)')
+st.subheader('Seleccionar los proyectos por estado (aprobados, desaprobados o en evaluación)')
 
 st.markdown("##") # Linea en blanco
 
@@ -223,7 +224,7 @@ startangle=0)
 #plt.title('Distribucion de datos segun ACTIVIDAD')
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 st.pyplot(fig1)
-st.write('Figura 1. Gráfica pie de los proyectos con la frecuencia según el ACTIVIDAD de proyecto.')
+st.write('Figura 1. Gráfica pie de los proyectos con la frecuencia según la ACTIVIDAD de proyecto.')
 
 ## Pie de frecuencia de tipo
 t2 = '• Frecuencia de los proyectos '+estado+' según la clasificación TIPO' 
@@ -273,11 +274,8 @@ st.subheader('Aplicación de los 5 pasos fundamentales para Machine Learning (Fi
 st.markdown("---")
 
 '''
-Haciendo uso de los datasets de aprobados y desprobados, se entrenaron modelos de clasificación. Se utilizaron
+Haciendo uso de los datasets de aprobados y desaprobados, se entrenaron modelos de clasificación. Se utilizaron
 las columnas de longitud, latitud, año y mes como X para predecir Y, que vendría a ser el Estado (categórico).
-
-A continuación, usted podrá elegir el tipo de modelo (LR, SVM, RF, NN) que desee usar para obtener el archivo
-donde se clasifica los proyectos que se encuentran en estado de evaluación como Aprobado o Desaprobado.
 '''
 st.markdown("##") # Linea en blanco
 # Imagen de las fases del Machine Learning
@@ -285,9 +283,14 @@ image = Image.open('machinelearning.png')
 st.image(image, caption='Figura 5. Pasos Fundamentales para el Machine Learning')
 st.markdown("##") # Linea en blanco
 
+'''
+A continuación, usted podrá elegir el tipo de modelo (LR, SVM, RF, NN) que desee usar para obtener el archivo
+donde se clasifica los proyectos que se encuentran en estado de evaluación como Aprobado o Desaprobado.
+'''
+
 # Selección del modelo para clasificar dataset de En evaluación
 st.markdown("##") # Linea en blanco
-st.write('Seleccionar tipo de modelo que se desea entrenar')
+st.header('Seleccionar el tipo de modelo que se desea entrenar')
 st.markdown("##") # Linea en blanco
 opcion_modelo = st.selectbox(
      '¿Qué modelo deseas utilizar para el entrenamiento y posterior clasificación?',
@@ -304,11 +307,12 @@ elif opcion_modelo == 'Neural Network':
 st.markdown("##") # Linea en blanco
 
 # Nivel de predicción del modelo elegido
-text2 = '• El score del modelo '+opcion_modelo+' es: '+str(round(modelo.score(X_test, y_test), 4))
+text2 = '• El score (nivel de predicción) del modelo '+opcion_modelo+' es: '+str(round(modelo.score(X_test, y_test), 4))
 st.subheader(text2)
 
+text3 = 'Se clasificaron los datos que se encontraban en estado de EVALUACIÓN utilizando el modelo '+opcion_modelo+'.'
 st.markdown("##")
-st.subheader("Se clasificaron los datos que tenían estado EN EVALUACIÓN utilizando el modelo",opcion_modelo)
+st.subheader(text3)
 st.write("Pulsar en el botón para descargar la información ya clasificada")
 
 # Creación del excel con predicciones
