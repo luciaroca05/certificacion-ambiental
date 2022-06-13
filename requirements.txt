@@ -1,3 +1,4 @@
 plotly
 matplotlib
 scikit-learn
+pyxlsb
