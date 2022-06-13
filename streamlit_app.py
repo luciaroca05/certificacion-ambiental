@@ -136,7 +136,7 @@ st.markdown("<h1 style='text-align: center; color: black;'>Certificación Ambien
 st.markdown("##") # Linea en blanco
 
 #Bienvenida
-st.markdown("<h1 style='text-align: center; color: black;'>Bienvenidxs a nuestra APP 🐄!</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black;'>¡Bienvenidxs a nuestra APP 🐄!</h1>", unsafe_allow_html=True)
 st.markdown("---") # Linea divisoria
 st.markdown("##") # Linea en blanco
 
@@ -144,10 +144,13 @@ st.markdown("##") # Linea en blanco
 st.header('Nosotras')
 st.markdown("##") # Linea en blanco
 st.caption('Grupo de estudiantes del 5to ciclo de la carrera de Ingeniería Ambiental de UPCH del curso de Programación Avanzada')
+st.markdown("##") # Linea en blanco
 
 #Integrantes con foto
-image = Image.open('integrantes.jpg')
-st.image(image, caption='Dona Nicole Chancan Aviles, María Fernanda Cisneros Moron, Sharon Nicolle Dextre Cartolin, Daniella Mercedes Palacios Li, Lucía Fernanda Roca Cuadros')
+image = Image.open('integrantes1.jpg')
+st.image(image, caption='María Fernanda Cisneros Morón, Dona Nicole Chancan Aviles, Sharon Nicolle Dextre Cartolin')
+image = Image.open('integrantes2.jpg')
+st.image(image, caption='Daniella Mercedes Palacios Li, Lucía Fernanda Roca Cuadros')
 st.markdown("##") # Linea en blanco
 
 st.markdown("---") # Linea divisoria
