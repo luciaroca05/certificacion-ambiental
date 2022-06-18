@@ -11,13 +11,13 @@ Actualmente estamos culminando el curso de "Programación Avanzada" en la Univer
 1. Daniella Mercedes Palacios Li
 - Correo: daniella.palacios@upch.pe
 2. Nicolle Dextre Cartolin
-- Correo:sharon.dextre@upch.pe
+- Correo: sharon.dextre@upch.pe
 3. Maria Fernanda Cisneros Moron 
-- Correo:maria.cisneros@upch.pe
+- Correo: maria.cisneros@upch.pe
 4. Dona Nicole Chancan Aviles
-- Correo:dona.chancan@upch.pe
-5. Lucia Fernanda Rocas Cuadro
-- Correo:lucia.roca@upch.pe
+- Correo: dona.chancan@upch.pe
+5. Lucia Fernanda Roca Cuadros
+- Correo: lucia.roca@upch.pe
 
 ### Utilizamos las siguientes herramientas 
 ```
