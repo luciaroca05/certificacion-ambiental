@@ -2,7 +2,7 @@
 https://github.com/luciaroca05/proyecto-final-certificacion-ambiental/
 https://share.streamlit.io/luciaroca05/proyecto-final-certificacion-ambiental/main
 cd Desktop
-cd proy (TAB)
+cd proyecto-final-certificacion-ambiental
 streamlit run streamlit_app.py
 git pull && git add . && git commit -m "." && git push
 
@@ -143,7 +143,7 @@ st.markdown("##") # Linea en blanco
 #Introducción al grupo
 st.header('Nosotras')
 st.markdown("##") # Linea en blanco
-st.caption('Grupo de estudiantes del 5to ciclo de la carrera de Ingeniería Ambiental de UPCH del curso de Programación Avanzada')
+st.caption('Somos un grupo de estudiantes cursando el 5to ciclo de la carrera de Ingeniería Ambiental en la Universidad Peruana Cayetano Heredia. Como proyecto final del curso “Programación Avanzada”, hemos creado esta página en base a los conocimientos adquiridos de las clases teóricas y prácticas a lo largo del ciclo, junto a la asesoría de nuestros profesores.')
 st.markdown("##") # Linea en blanco
 
 #Integrantes con foto
@@ -158,28 +158,62 @@ st.markdown("---") # Linea divisoria
 #Sobre el APP
 st.header('Sobre el APP')
 st.markdown("##") # Linea en blanco
-'''
-En esta APP se va a relizar el análisis, visualización y clasificación, utilizando datos de proyectos en
-3 diferentes estados (Aprobados, Desaprobados, En evalución) sobre certificación ambiental del Servicio
-Nacional de Certificación Ambiental para las Inversiones Sostenibles – SENACE.
 
-Fuente: https://www.datosabiertos.gob.pe/dataset/certificaci%C3%B3n-ambiental
-
-Los datos de los proyectos están clasificados en las siguientes categorías,
+st.subheader('Objetivo')
 '''
-st.write('ID: ') 
-st.write('Titular: ')
-st.write('RUC: Registro Único de Contribuyentes')
-st.write('Título Proyecto: ')
-st.write('Unidad Proyecto: ')
-st.write('Tipo: ')
-st.write('Actividad: ')
-st.write('Fecha de inicio: ')
-st.write('Estado: ')
-st.write('Descripción: ')
-st.write('Longitud y Latitud: Ubicación ')
-st.write('Resolución: ')
-st.write('Label: ')
+El objetivo de la presente página es brindar a los usuarios la posibilidad de realizar el análisis, la visualización y la clasificación de los datos disponibles de proyectos en 3 diferentes estados (Aprobados, Desaprobados, En evaluación) sobre certificación ambiental del Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles – SENACE.
+'''
+st.markdown("##")
+st.subheader('Alcance')
+'''
+Esta página está dirigida a los usuarios que deseen saber en qué estado se encuentra su proceso para obtener la certificación ambiental y estadísticas basadas en proyectos pasados que fueron aprobados, desaprobados o siguen en evaluación.
+Certificación Ambiental
+La certificación ambiental es el instrumento previo que todo proyecto de inversión debe elaborar antes de ser ejecutado, previendo los impactos ambientales negativos significativos que podría generar.
+'''
+st.markdown("##")
+st.subheader('Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles – SENACE')
+'''
+Este organismo público especializado está a cargo de la revisión y aprobación de la certificación de estudios de impacto ambiental de los proyectos de inversión a las instituciones públicas y privadas de manera oportuna, transparente, con calidad técnica y confiable.
+'''
+st.markdown("##")
+st.subheader('Dataset')
+'''
+Todos los datos utilizados para la elaboración de esta página y sus respectivos análisis fueron obtenidos de la Plataforma Nacional de Datos Abiertos del Perú (https://www.datosabiertos.gob.pe/dataset/certificaci%C3%B3n-ambiental). Asimismo, estos datos fueron publicados por el Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles – SENACE el 07 de enero del 2021 y modificado por última vez el 14 de junio del 2021. 
+'''
+st.markdown("##")
+st.subheader('Licencia')
+'''
+Open Data Commons Open Database License (ODbL) http://opendefinition.org/licenses/odc-odbl/ 
+'''
+st.markdown("##")
+st.subheader('Clasificación de datos')
+'''
+Los datos de los proyectos están clasificados en las siguientes categorías:
+'''
+st.markdown("##")
+st.write('**ID:** En esta categoría se muestra el número de identificación del proyecto') 
+st.markdown("##")
+st.write('**Titular:** En esta categoría se muestra quién es el titular del proyecto')
+st.markdown("##")
+st.write('**RUC:** En esta categoría se muestra el número de RUC (Registro Único de Contribuyentes) del titular del proyecto.')
+st.markdown("##")
+st.write('**Título Proyecto:** En esta categoría se muestra el título del proyecto.')
+st.markdown("##")
+st.write('**Unidad Proyecto:** En esta categoría se muestra a qué unidad pertenece el proyecto (ej: Unidad Minera, Central Hidroeléctrica, etc)')
+st.markdown("##")
+st.write('**Tipo:** En esta categoría se muestra qué instrumento de gestión es presentado (Clasificación, ITS, EIA-d, EIA-sd, IGAPRO, PPC, MEIA-d)')
+st.markdown("##")
+st.write('**Actividad:** En esta categoría se muestra a qué actividad económica pertenece el proyecto (Transportes, Electricidad, Agricultura, Minería, Hidrocarburos, Residuos Sólidos, Salud)')
+st.markdown("##")
+st.write('**Fecha de inicio:** En esta categoría se muestra la fecha en la que se presentó el proyecto.')
+st.markdown("##")
+st.write('**Estado:** En esta categoría se muestra en qué estado se encuentra el proyecto (aprobado, desaprobado, en evaluación)')
+st.markdown("##")
+st.write('**Descripción:** En esta categoría se muestra la descripción del proyecto')
+st.markdown("##")
+st.write('**Longitud y Latitud:** En esta categoría se muestra la longitud y latitud para la localización geográfica del proyecto.')
+st.markdown("##")
+st.write('**Resolución:** En esta categoría se muestra la resolución del proyecto (Ej: R.D. N°186‐2017‐MTC/16)')
 
 st.markdown("---") # Linea divisoria
 
@@ -275,10 +309,18 @@ st.markdown("---") # Linea divisoria
 st.header('Análisis predictivo')
 st.subheader('Aplicación de los 5 pasos fundamentales para Machine Learning (Fig. 5.)')
 st.markdown("---")
-
 '''
-Haciendo uso de los datasets de aprobados y desaprobados, se entrenaron modelos de clasificación. Se utilizaron
-las columnas de longitud, latitud, año y mes como X para predecir Y, que vendría a ser el Estado (categórico).
+El objetivo del aprendizaje supervisado es desarrollar un algoritmo que establezca una
+correspondencia entre los elementos de entrada y las distintas salidas deseadas. En
+este caso, las fuentes de entrada que empleamos serían los datos sobre las
+certificaciones aprobadas y desaprobadas, mientras que la salida sería el nivel de
+predicción.
+'''
+st.markdown("##")
+'''
+Haciendo uso de los datasets de aprobados y desaprobados, se entrenaron modelos de
+clasificación. Se utilizaron las columnas de longitud, latitud, año y mes como X para
+predecir Y, que vendría a ser el Estado (categórico).
 '''
 st.markdown("##") # Linea en blanco
 # Imagen de las fases del Machine Learning
@@ -286,9 +328,20 @@ image = Image.open('machinelearning.png')
 st.image(image, caption='Figura 5. Pasos Fundamentales para el Machine Learning')
 st.markdown("##") # Linea en blanco
 
+st.subheader('Tipos de análisis')
+st.markdown("##")
+st.write('**LR:** La regresión logística estima la probabilidad de que ocurra un evento, basándose en un conjunto de datos dado de variables independientes. Se aplica una transformación logit en las probabilidades, es decir, la probabilidad de éxito dividida por la probabilidad de fracaso.')
+st.markdown("##")
+st.write('**SVM:** La máquina de vectores de soporte (SVM) es un algoritmo de clasificación de datos de análisis predictivo que asigna nuevos elementos de datos a una de las categorías etiquetadas. SVM es, en la mayoría de los casos, un clasificador binario; asume que los datos en cuestión contienen dos posibles valores objetivos.')
+st.markdown("##")
+st.write('**RF:** Un Random Forest es un conjunto de árboles de decisión combinados con bagging. Al usar bagging, lo que en realidad está pasando, es que distintos árboles ven distintas porciones de los datos. Esto hace que cada árbol se entrene con distintas muestras de datos para un mismo problema. De esta forma, al combinar sus resultados, unos errores se compensan con otros y tenemos una predicción que generaliza mejor.')
+st.markdown("##")
+st.write('**NN:** Una red neuronal es un algoritmo complejo utilizado para el análisis predictivo, está biológicamente inspirado en la estructura del cerebro humano. Se utiliza para la clasificación de datos, las redes neuronales procesan datos pasados ​​y actuales para estimar valores futuros, descubriendo cualquier correlación compleja oculta en los datos, de una manera análoga a la empleada por el cerebro humano.')
+st.markdown("##")
 '''
-A continuación, usted podrá elegir el tipo de modelo (LR, SVM, RF, NN) que desee usar para obtener el archivo
-donde se clasifica los proyectos que se encuentran en estado de evaluación como Aprobado o Desaprobado.
+A continuación, usted podrá elegir el tipo de modelo (LR, SVM, RF, NN) que desee
+usar para obtener el archivo donde se clasifica los proyectos que se encuentran en
+estado de evaluación como Aprobado o Desaprobado.
 '''
 
 # Selección del modelo para clasificar dataset de En evaluación
