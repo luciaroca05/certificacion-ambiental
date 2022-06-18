@@ -6,7 +6,11 @@ Somos un grupo de estudiantes del 5to ciclo de la carrera de Ingenieria Ambienta
 ## Contactanos
 **Daniella Palacios Li**
 DNI:74870060
-Daniella.li@upch.pe
+Daniella.palacios@upch.pe
+
+**Dona Nicole Chancan Aviles**
+DNI:
+
 
 
 Aqui pongo un poco de codigo
