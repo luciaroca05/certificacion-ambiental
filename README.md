@@ -19,7 +19,7 @@ Actualmente estamos culminando el curso de "Programación Avanzada" en la Univer
 5. Lucia Fernanda Roca Cuadros
 - Correo: lucia.roca@upch.pe
 
-### Utilizamos las siguientes biblioteca
+### Utilizamos las siguientes bibliotecas
 ```
 plotly
 matplotlib
