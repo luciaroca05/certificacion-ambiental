@@ -4,16 +4,12 @@ Este proyecto tiene como objetivo que los usuarios puedan visualizar el analisis
 ## ¿Quienes somos?
 Somos un grupo de estudiantes del 5to ciclo de la carrera de Ingenieria Ambiental y en el procesos de la creación de la página contamos con la asesoría de profesores. Creamos esta página con la intención que los usuarios tengan una mejor información respecto a los datos de certificación ambiental en los tres diferentes estados (Aprobados, Desaprobados y en Evaluación)
 ## Contactano
-Daniella Palacios Li 
-```
-DNI:65659565
-Correo electronico:Daniella.palacios@upch.pe
-```
-1. Daniella Palacios Li
-- dfdfdfdf
-- fdfdfdf
-
-
+1. Daniella Mercedes Palacios Li
+- DNI:74870060
+- Correo: daniella.palacios@upch.pe
+2. Nicolle Dextre Cartolin
+- DNI: 546465465
+- Correo:sharon.dextre@upch.pe
 Aqui pongo un poco de codigo
 ```
 git status
