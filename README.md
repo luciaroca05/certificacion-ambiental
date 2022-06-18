@@ -5,13 +5,10 @@ Este proyecto tiene como objetivo que los usuarios puedan visualizar el analisis
 Somos un grupo de estudiantes del 5to ciclo de la carrera de Ingenieria Ambiental y en el procesos de la creación de la página contamos con la asesoría de profesores. Creamos esta página con la intención que los usuarios tengan una mejor información respecto a los datos de certificación ambiental en los tres diferentes estados (Aprobados, Desaprobados y en Evaluación)
 ## Contactanos
 **Daniella Palacios Li**
-DNI:74870060
-Daniella.palacios@upch.pe
-
-**Dona Nicole Chancan Aviles**
-DNI:
-
-**Sharon Nicolle Dextre Cartolin **                                                                                                                                                             n.dextre.c@gmail.com
+'''
+dni:
+correo elec: daniella.palacios@upch.pe
+'''
 
 
 
