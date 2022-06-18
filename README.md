@@ -11,9 +11,7 @@ Daniella.palacios@upch.pe
 **Dona Nicole Chancan Aviles**
 DNI:
 
-**Sharon Nicolle Dextre Cartolin ** 
-<sub> sharon.dextre@upch.pe</sub>
-
+**Sharon Nicolle Dextre Cartolin **                                                                                                                                                             n.dextre.c@gmail.com
 
 
 
