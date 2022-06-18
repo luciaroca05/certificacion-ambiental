@@ -161,7 +161,11 @@ st.markdown("##") # Linea en blanco
 
 st.subheader('Objetivo')
 '''
-El objetivo de la presente página es brindar a los usuarios la posibilidad de realizar el análisis, la visualización y la clasificación de los datos disponibles de proyectos en 3 diferentes estados (Aprobados, Desaprobados, En evaluación) sobre certificación ambiental del Servicio Nacional de Certificación Ambiental para las Inversiones Sostenibles – SENACE.
+El objetivo de la presente página es brindar a los usuarios la posibilidad de realizar
+el análisis, la visualización y la clasificación de los datos disponibles de proyectos
+en 3 diferentes estados (Aprobados, Desaprobados, En evaluación) para su certificación
+ambiental otorgada por el Servicio Nacional de Certificación Ambiental para las Inversiones
+Sostenibles – SENACE.
 '''
 st.markdown("##")
 st.subheader('Alcance')
