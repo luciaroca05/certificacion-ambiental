@@ -19,7 +19,7 @@ Actualmente estamos culminando el curso de "Programación Avanzada" en la Univer
 5. Lucia Fernanda Rocas Cuadro
 - Correo:lucia.roca@upch.pe
 
-###Utilizamos las siguientes herramientas 
+### Utilizamos las siguientes herramientas 
 ```
 plotly
 matplotlib
