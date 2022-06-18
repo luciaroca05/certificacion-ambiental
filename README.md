@@ -18,7 +18,9 @@ Somos un grupo de estudiantes del 5to ciclo de la carrera de Ingenieria Ambienta
 
 Aqui pongo un poco de codigo
 ```
-git status
-git add
-git commit
+plotly
+matplotlib
+scikit-learn
+pyxlsb
+XlsxWriter
 ```
